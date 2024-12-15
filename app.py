@@ -11,7 +11,7 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 STATIC_FOLDER = 'static'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
-MODEL_PATH = r'D:\Flowerr\Flowerrecognew.h5'  # Update with your correct model path
+MODEL_PATH = os.path.join(os.getcwd(), 'Flowerrecognew.h5')  # Update with your correct model path
 
 # Create necessary folders if they don't exist
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
